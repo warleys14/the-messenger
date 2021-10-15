@@ -2,7 +2,8 @@
   <div id="app">
     <Header/>
     <HomePresentation />
-    <ButtonFooter/>
+    <ButtonFooter :dialogFunction="changeDialogVisibility"/>
+    <InfoDialog :visible="dialogVisible"/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from './components/Header.vue';
 import HomePresentation from './components/HomePresentation.vue';
 import ButtonFooter from './components/ButtonFooter.vue';
+import InfoDialog from './components/InfoDialog.vue';
 
 export default {
   name: 'App',
@@ -17,6 +19,17 @@ export default {
     Header,
     HomePresentation,
     ButtonFooter,
+    InfoDialog,
+  },
+  computed:{
+    dialogVisible(){
+      return this.$store.state.dialogVisible //valor que está na store, e sua referência é acessada e retornada em hasSearchedUser, assim HomeUser ou HomeNotUser é renderizado
+    }
+  },
+  methods:{
+    changeDialogVisibility(){
+      this.$store.commit('changeDialogVisibility');
+    }
   }
 }
 </script>

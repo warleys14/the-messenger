@@ -1,6 +1,6 @@
 <template>
     <div class="footer-container">
-        <button type="button">
+        <button type="button" @click="dialogFunction">
             COMO FUNCIONA
         </button>
 
@@ -12,7 +12,13 @@
 
 <script>
     export default{
-        name: "ButtonFooter"
+        name: "ButtonFooter",
+        props:{
+            dialogFunction: {
+                type: Function,
+                required: true
+            }
+        }
     }
 </script>
 
