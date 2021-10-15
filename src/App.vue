@@ -2,7 +2,12 @@
   <div id="app">
     <Header/>
     <HomePresentation />
-    <ButtonFooter :dialogFunction="changeDialogVisibility"/>
+    <ButtonFooter 
+      :firstButtonFunction="changeDialogVisibility"
+      firstButtonLabel="COMO FUNCIONA" 
+      :lastButtonFunction="()=>{}"
+      lastButtonLabel="DIAS FALTANTES"
+    />
     <InfoDialog :visible="dialogVisible"/>
   </div>
 </template>

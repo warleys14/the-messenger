@@ -1,11 +1,11 @@
 <template>
     <div class="footer-container">
-        <button type="button" @click="dialogFunction">
-            COMO FUNCIONA
+        <button type="button" @click="firstButtonFunction">
+            {{ firstButtonLabel }}
         </button>
 
-        <button type="button">
-            DIAS FALTANTES
+        <button type="button" @click="lastButtonFunction">
+            {{ lastButtonLabel }}
         </button>
     </div>
 </template>
@@ -14,7 +14,19 @@
     export default{
         name: "ButtonFooter",
         props:{
-            dialogFunction: {
+            firstButtonLabel: {
+                type: String,
+                required: true
+            },
+            lastButtonLabel: {
+                type: String,
+                required: true
+            },
+            firstButtonFunction: {
+                type: Function,
+                required: true
+            },
+            lastButtonFunction: {
                 type: Function,
                 required: true
             }
