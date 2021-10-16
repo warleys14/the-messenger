@@ -1,41 +1,20 @@
 <template>
-  <div id="app">
-    <Header/>
-    <HomePresentation />
-    <ButtonFooter 
-      :firstButtonFunction="changeDialogVisibility"
-      firstButtonLabel="COMO FUNCIONA" 
-      :lastButtonFunction="()=>{}"
-      lastButtonLabel="DIAS FALTANTES"
-    />
-    <InfoDialog :visible="dialogVisible"/>
+  <div>
+   <!-- <Home /> -->
+    <remaining-days />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import HomePresentation from './components/HomePresentation.vue';
-import ButtonFooter from './components/ButtonFooter.vue';
-import InfoDialog from './components/InfoDialog.vue';
+//import Home from './views/Home.vue';
+import RemainingDays from './views/RemainingDays.vue';
 
 export default {
   name: 'App',
   components: {
-    Header,
-    HomePresentation,
-    ButtonFooter,
-    InfoDialog,
+    //Home,
+    RemainingDays
   },
-  computed:{
-    dialogVisible(){
-      return this.$store.state.dialogVisible //valor que está na store, e sua referência é acessada e retornada em hasSearchedUser, assim HomeUser ou HomeNotUser é renderizado
-    }
-  },
-  methods:{
-    changeDialogVisibility(){
-      this.$store.commit('changeDialogVisibility');
-    }
-  }
 }
 </script>
 
@@ -52,5 +31,4 @@ export default {
 html{
   background-color: #242324;
 }
-
 </style>
