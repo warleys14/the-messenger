@@ -17,6 +17,7 @@
         width: 100%;
         display: flex;
         justify-content: flex-start;
+        padding: 0.5rem 2rem;
 
         h2{
             color: #FF725E
