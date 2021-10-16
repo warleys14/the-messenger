@@ -51,6 +51,11 @@
     .md-dialog-container{
         background-color: #fff;
         width: 50%;
+
+        @media (max-width: 700px){
+            height: fit-content !important;
+            width: 30vw !important;
+        }
     }
 
     .confirm-dialog-body{

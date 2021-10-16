@@ -26,6 +26,10 @@
 
         h1{
             color: white;
+
+            @media (max-width: 700px){
+                font-size: 1.3rem;
+            }
         }
     }
 </style>
