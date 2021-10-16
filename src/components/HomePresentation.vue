@@ -22,10 +22,16 @@
         img{
             width: 510px;
             height: 330px;
+
+            @media (max-width: 700px){
+                width: 350px;
+                height: 230px;
+            }
         }
 
         h1{
             color: white;
+            text-align: center;
 
             @media (max-width: 700px){
                 font-size: 1.3rem;

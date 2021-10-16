@@ -70,7 +70,7 @@
 
         h1{
             color: white;
-
+            text-align: center;
         }
 
         span{
@@ -81,6 +81,7 @@
         }
         .quote{
             margin: 1.4rem 0 0.2rem 0;
+            text-align: center;
         }
         p{
             margin: 0.5rem 0 2rem 0;
