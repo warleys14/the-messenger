@@ -1,20 +1,13 @@
 <template>
   <div>
-   <!-- <Home /> -->
-    <remaining-days />
+    <router-view />
   </div>
 </template>
 
 <script>
-//import Home from './views/Home.vue';
-import RemainingDays from './views/RemainingDays.vue';
 
 export default {
   name: 'App',
-  components: {
-    //Home,
-    RemainingDays
-  },
 }
 </script>
 

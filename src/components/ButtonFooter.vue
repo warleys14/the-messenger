@@ -3,10 +3,12 @@
         <button type="button" @click="firstButtonFunction">
             {{ firstButtonLabel }}
         </button>
-
-        <button type="button" @click="lastButtonFunction">
-            {{ lastButtonLabel }}
-        </button>
+        <router-link :to="lastButtonRouter">
+            <button class="router-button" type="button">
+                {{ lastButtonLabel }}
+            </button>
+        </router-link>
+        
     </div>
 </template>
 
@@ -26,8 +28,8 @@
                 type: Function,
                 required: true
             },
-            lastButtonFunction: {
-                type: Function,
+            lastButtonRouter: {
+                type: String,
                 required: true
             }
         }
@@ -62,18 +64,18 @@
             }
         }
 
-        :last-child{
+        .router-button{
             border: none;
             background-color: #FF725E;
             color: #fff;
             font-weight: bolder;
             border-radius: 10px;
             height: 2.5rem;    
-            width: 25%;   
+            width: 25vw;   
             cursor: pointer; 
             
             @media (max-width: 700px){
-                width: 40%;
+                width: 40vw;
             }
         }
     }

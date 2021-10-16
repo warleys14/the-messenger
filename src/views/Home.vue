@@ -4,9 +4,9 @@
         <HomePresentation />
         <ButtonFooter 
             :firstButtonFunction="changeDialogVisibility"
-            firstButtonLabel="COMO FUNCIONA" 
-            :lastButtonFunction="()=>{}"
+            firstButtonLabel="COMO FUNCIONA"
             lastButtonLabel="DIAS FALTANTES"
+            lastButtonRouter="/days"
         />
         <InfoDialog :visible="dialogVisible"/>
   </div>

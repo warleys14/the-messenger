@@ -6,13 +6,13 @@
             <span>{{remainingsDays}}</span>
             <h1>{{ secondText }}</h1>
             <p class="quote">”Só existe um caminho: se iludir com o final do período. Fé.”</p>
-            <p>- Galvão Bueno</p>
+            <p>- Machado de Assis </p>
         </div>
         <button-footer
             firstButtonLabel="COMO FUNCIONA"
             :firstButtonFunction="changeDialogVisibility"
             lastButtonLabel="TELA INICIAL"
-            :lastButtonFunction="()=> {}"
+            lastButtonRouter="/"
         />
         <info-dialog :visible="dialogVisible"/>
     </div>
@@ -24,7 +24,7 @@
     import InfoDialog from '../components/InfoDialog.vue';
 
     export default{
-        name: "RemainingDays",
+        name: "Days",
         components:{
             Header,
             ButtonFooter,
