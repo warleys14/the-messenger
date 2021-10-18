@@ -48,6 +48,8 @@
 </script>
 
 <style lang="scss">
+@import "../styles/_variables.scss";
+
     .md-dialog-container{
         background-color: #fff;
         width: 50%;
@@ -68,7 +70,7 @@
         justify-content: flex-end;
 
         .md-accent{
-            background-color: #FF725E;
+            background-color: $primary-color;
             color: #fff;
         }
     }

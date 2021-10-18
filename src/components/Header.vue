@@ -12,6 +12,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/_variables.scss";
 
     .header-container{
         width: 100%;
@@ -20,7 +21,7 @@
         padding: 0.5rem 2rem;
 
         h2{
-            color: #FF725E
+            color: $primary-color;
         }    
     }
     

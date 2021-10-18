@@ -37,9 +37,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/_variables.scss";
+@import "../styles/_base.scss";
+    
     .footer-container{
-        display: flex;
-        flex-direction: row;
+        @include flexbox(row);
         align-items: center;
         justify-content: center;
         gap: 2rem;
@@ -48,7 +50,7 @@
         :first-child{
             background-color: transparent;
             color: #fff;
-            border: #FF725E solid 2px;
+            border: $primary-color solid 2px;
             border-radius: 10px;
             height: 2.5rem;
             width: 25%; 
@@ -66,7 +68,7 @@
 
         .router-button{
             border: none;
-            background-color: #FF725E;
+            background-color: $primary-color;
             color: #fff;
             font-weight: bolder;
             border-radius: 10px;

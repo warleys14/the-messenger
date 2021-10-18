@@ -13,9 +13,9 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/_base.scss";
     .presentation-container{
-        display: flex;
-        flex-direction: column;
+        @include flexbox(column);
         justify-content: center;
         align-items: center;
 

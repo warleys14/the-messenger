@@ -58,13 +58,14 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/_variables.scss";
+@import "../styles/_base.scss";
     .home-container{
         height: 500px;
     }
 
     .info-container{
-        display: flex;
-        flex-direction: column;
+        @include flexbox(column);
         align-items: center;
         
 
@@ -74,7 +75,7 @@
         }
 
         span{
-            color: #FF725E;
+            color: $primary-color;
             font-size: 10rem;
             font-weight: bolder;
             margin: 5rem 0 ;
