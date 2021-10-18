@@ -5,8 +5,8 @@
             <h1>{{ firstText }}</h1>
             <span>{{remainingsDays}}</span>
             <h1>{{ secondText }}</h1>
-            <p class="quote">”Só existe um caminho: se iludir com o final do período. Fé.”</p>
-            <p>- Machado de Assis </p>
+            <p class="quote">{{actualQuote.quote}}</p>
+            <p>- {{actualQuote.author}} </p>
         </div>
         <button-footer
             firstButtonLabel="COMO FUNCIONA"
@@ -46,6 +46,51 @@
             secondText(){
                 return this.remainingsDays > 1 ? "dias para o período acabar." : "dia para o período acabar." 
             },
+            actualQuote(){
+                const quotes = [
+                    {
+                        quote: "O semestre mal começou e eu já estou pedindo misericórdia.",
+                        author: "Barack Obama"    
+                    },
+                    
+                    {
+                        quote: "Eu só quero que o período acabe.",
+                        author: "Clarice Lispector"    
+                    },
+
+                    {
+                        quote: "Foi difícil chegar aonde eu cheguei, mas ainda não cheguei a lugar nenhum.",
+                        author: "Lucas Silva"    
+                    },
+
+                    {
+                        quote: "Só existe um caminho: se iludir com o final do período. Fé.",
+                        author: "Machado de Assis"    
+                    },
+
+                    {
+                        quote: "Não faço mais faculdade, agora só faço sucesso.",
+                        author: "Tony Stark"    
+                    },
+                ]
+                let quote = {}
+                if(this.remainingsDays >= 55 && this.remainingsDays < 70){
+                    quote = quotes[0]
+                }
+                else if(this.remainingsDays >= 30 && this.remainingsDays < 55){
+                    quote = quotes[1]
+                }
+                else if(this.remainingsDays >= 15 && this.remainingsDays < 30){
+                    quote = quotes[2]
+                }
+                else if(this.remainingsDays >= 1 && this.remainingsDays < 15){
+                    quote = quotes[3]
+                }
+                else if(this.remainingsDays == 0){
+                    quote = quotes[4]
+                }
+                return quote;
+            }
             
         },
 
