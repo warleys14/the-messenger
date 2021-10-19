@@ -54,6 +54,11 @@
                     },
                     
                     {
+                        quote: "Impressionante que esse período não acaba. Help me to help you!",
+                        author: "Albert Einstein"    
+                    },
+
+                    {
                         quote: "Eu só quero que o período acabe.",
                         author: "Clarice Lispector"    
                     },
@@ -74,20 +79,23 @@
                     },
                 ]
                 let quote = {}
-                if(this.remainingsDays >= 55 && this.remainingsDays < 70){
+                if(this.remainingsDays >= 60 && this.remainingsDays < 70){
                     quote = quotes[0]
                 }
-                else if(this.remainingsDays >= 30 && this.remainingsDays < 55){
+                else if(this.remainingsDays >= 45 && this.remainingsDays < 60){
                     quote = quotes[1]
                 }
-                else if(this.remainingsDays >= 15 && this.remainingsDays < 30){
+                else if(this.remainingsDays >= 30 && this.remainingsDays < 45){
                     quote = quotes[2]
                 }
-                else if(this.remainingsDays >= 1 && this.remainingsDays < 15){
+                else if(this.remainingsDays >= 15 && this.remainingsDays < 30){
                     quote = quotes[3]
                 }
-                else if(this.remainingsDays == 0){
+                else if(this.remainingsDays >= 1 && this.remainingsDays < 15){
                     quote = quotes[4]
+                }
+                else if(this.remainingsDays == 0){
+                    quote = quotes[5]
                 }
                 return quote;
             }
